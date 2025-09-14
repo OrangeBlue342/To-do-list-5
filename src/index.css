@@ -14,6 +14,11 @@
     background-color: rgb(233, 233, 233);
 }
 
+.List {
+  display: grid;
+  grid-template-columns: auto;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

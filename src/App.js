@@ -16,7 +16,7 @@ function App() {
     <h1 className="header">Lista zadań</h1>
     <h2 className="tasks_header">Dodaj nowe zadanie</h2>
 <Form/>
-<div>
+<div className="List">
 <h2 className="list_header">Lista zadań
     <Buttons tasks={tasks} hideDoneTasks={hideDoneTasks}/> 
 </h2>
