@@ -1,0 +1,33 @@
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+    .form {
+        grid-template-columns: 1fr;
+    }}
+
+.buttons_button1 {
+    background-color: white;
+    color: teal;
+    border: none;
+    transition: 1s;
+    margin: 0 0 0 60px;
+    font-size: medium; 
+}
+
+.buttons_button2 {
+    background-color: white;
+    color: teal;
+    border: none;
+    transition: 1s; 
+    font-size: medium;
+}
+
+.buttons_button:hover {
+    color: hsl(180, 100%, 35%);
+}
