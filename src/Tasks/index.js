@@ -1,29 +1,31 @@
-import "./index.css";
+
+import {List, Item, Content, Button} from "./styled";
 
 const Tasks = ({tasks, toggleAllTasksDone, toggleHideDoneTasks, removeTask, toggleTasksDone}) => {
     const safeTasks = Array.isArray(tasks) ? tasks : [];
     return (
-        <ul className="tasks">
+        <List>
             {safeTasks.map(task => (
-                <li key={task.id}
-                    className={`list_item ${toggleAllTasksDone && toggleHideDoneTasks ? "tasks_item--hidden" : ""}`}
+                <Item 
+                key={task.id}
+                hidden={toggleAllTasksDone && toggleHideDoneTasks}
                 >
-                    <button 
-                        className="button_done"
+                    <Button
+                        button_done
                         onClick={() => toggleTasksDone(task.id)}
                         >
                         {task.done ? "✔" : ""}
-                    </button>
-                    <span className={`tasks__content${task.done ? " list_item_done" : ""}`}>
+                    </Button>
+                    <Content done={task.done}>
                         {task.content}
-                    </span>
-                    <button 
-                        className="button_remove"
+                    </Content>
+                    <Button
+                        button_remove
                         onClick={() => removeTask(task.id)}
-                        >🗑</button>
-                </li>
+                        >🗑</Button>
+                </Item>
             ))}
-        </ul>
+        </List>
     );
 };
 
