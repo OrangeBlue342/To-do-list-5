@@ -7,12 +7,13 @@ export const List = styled.ul `
 `;
 
 export const Item = styled.li `
+    background-color: ${({theme}) => theme.color.white};
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
     padding: 10px;
     word-break: break-word;
-    margin-bottom: 20px;
+    margin-bottom: 2px;
     font-family: Montserrat, sans-serif;
 
     ${({hidden}) => hidden && css`

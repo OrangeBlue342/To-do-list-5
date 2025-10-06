@@ -1,4 +1,5 @@
-import "./index.css"
+
+import { Button, Wrapper } from "./styled";
 
 const Buttons = ({tasks, hideDoneTasks, togglehideDoneTasks, setAllDone}) => {
     // Ensure tasks is always an array
@@ -8,18 +9,17 @@ const Buttons = ({tasks, hideDoneTasks, togglehideDoneTasks, setAllDone}) => {
     }
 
     return (
-        <div className="buttons">
-            <button onClick={togglehideDoneTasks} className="buttons_button1">
+        <Wrapper>
+            <Button onClick={togglehideDoneTasks}>
                 {hideDoneTasks ? "Pokaż" : "Ukryj"} skończone zadania
-            </button>
-            <button 
+            </Button>
+            <Button 
                 onClick={() => setAllDone()}
-                className="buttons_button2"
                 disabled={safeTasks.every(({done}) => done)}
             >
                 Oznacz wszystkie jako ukończone
-            </button>
-        </div>
+            </Button>
+        </Wrapper>
     );
 };
 

@@ -1,4 +1,7 @@
- html {
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle `
+html {
     box-sizing: border-box;
 }
 *, ::after, ::before {
@@ -6,27 +9,16 @@
 }
 
 
-.body {
+body {
     font-family: Montserrat, sans-serif;
     max-width: 1000px;
     padding: 20px;
     margin: 0 auto;
-    background-color: rgb(233, 233, 233);
-}
-
-.list_header {
-  max-width: 1000px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.List {
-  display: grid;
-  grid-template-columns: auto;
+    background-color: ${({theme}) => theme.color.white};
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+    `;

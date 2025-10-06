@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import Buttons from "./Buttons";
 import Form from "./Form";
 import Tasks from "./Tasks";
+import { HeaderL, HeaderT, List } from "./styled";
 
 const getInitialTasks = () => {
 const tasksFromLocalStorage = localStorage.getItem("tasks");
@@ -60,21 +61,21 @@ setTasks(tasks => [
 };
 
   return (
-     <div>
-     <main className="body">
+     <div className="body">
+     <main>
     <h1 className="header">Lista zadań</h1>
-    <h2 className="tasks_header">Dodaj nowe zadanie</h2>
+    <HeaderT>Dodaj nowe zadanie</HeaderT>
 <Form addNewTask={addNewTask}/>
-<div className="List">
-<h2 className="list_header">Lista zadań
+<List>
+<HeaderL>Lista zadań
     <Buttons 
     tasks={tasks} 
     hideDoneTasks={hideDoneTasks}
     setAllDone={setAllDone}
     togglehideDoneTasks={togglehideDoneTasks}
     /> 
-</h2>
-</div>
+</HeaderL>
+</List>
 
 <Tasks 
 tasks={tasks} 
