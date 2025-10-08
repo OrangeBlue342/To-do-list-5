@@ -14,7 +14,7 @@ export const HeaderT = styled.h2 `
     margin-bottom: 2px;
 `;
 
-export const List = styled.div `
+export const Wrapper = styled.div `
   display: grid;
   grid-template-columns: auto;
 `;
