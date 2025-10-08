@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+
 import Buttons from "./Buttons";
 import Form from "./Form";
 import Tasks from "./Tasks";
@@ -13,11 +13,10 @@ const {
   tasks, 
         addNewTask,
         hideDoneTasks,
-        sethideDoneTasks,
         togglehideDoneTasks, 
         removeTask, 
         toggleTasksDone, 
-        setAllDone} = useTasks()
+        setAllDone} = useTasks();
 
 
   return (

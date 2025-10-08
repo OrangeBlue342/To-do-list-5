@@ -8,7 +8,7 @@ export const HeaderL = styled.h2 `
 `;
 
 export const HeaderT = styled.h2 `
-    background-color: white;
+    max-width: 1000px;
     padding: 20px;
     margin: 5px, 20px;
     margin-bottom: 2px;
