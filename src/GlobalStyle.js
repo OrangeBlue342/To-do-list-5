@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-export const GlobalStyle = createGlobalStyle `
+export const GlobalStyle = createGlobalStyle`
 
 html {
     box-sizing: border-box;
@@ -15,7 +15,7 @@ html {
     max-width: 1000px;
     padding: 20px;
     margin: 0 auto;
-    background-color: ${({theme}) => theme.color.gallery};
+    background-color: ${({theme}) => theme.color.silver};
 }
 
 code {

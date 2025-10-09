@@ -2,7 +2,8 @@
 import Buttons from "./Buttons";
 import Form from "./Form";
 import Tasks from "./Tasks";
-import { HeaderL, HeaderT, Wrapper } from "./styled";
+import Section from "./Section";
+import { HeaderL, Wrapper } from "./styled";
 import { useTasks } from "./useTasks";
 
 
@@ -23,8 +24,10 @@ const {
      <div>
      <main>
     <h1 className="header">Lista zadań</h1>
-    <HeaderT>Dodaj nowe zadanie</HeaderT>
-<Form addNewTask={addNewTask}/>
+    
+    <Section title="Dodaj nowe zadanie" body={<Form addNewTask={addNewTask}/>} />
+    
+   
 <Wrapper>
 <HeaderL>Lista zadań
     <Buttons 
