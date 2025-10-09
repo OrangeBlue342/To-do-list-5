@@ -1,20 +1,15 @@
 import styled from "styled-components";
 
 export const Body = styled.div`
-padding: 20px;
+padding-bottom: 2px;
 `;
 
 export const Title = styled.h2`
-font-size: 20px;`;
+font-size: 20px;
+margin-bottom: 2px;
+margin: 0`;
 
-export const Header = styled.h2`
-    max-width: 1000px;
-    padding: 20px;
-    margin: 5px, 20px;
-    margin-bottom: 2px;
-`;
-
-export const HeaderL = styled.h2 `
+export const Header = styled.header`
   max-width: 1000px;
   display: flex;
   justify-content: space-between;
@@ -23,14 +18,6 @@ export const HeaderL = styled.h2 `
   margin: 5px, 20px;
   margin-bottom: 2px;
   background-color: ${({theme}) => theme.color.white};
-`;
-
-export const HeaderT = styled.h2`
-    max-width: 1000px;
-    padding: 20px;
-    margin: 5px, 20px;
-    margin-bottom: 2px;
-    background-color: ${({theme}) => theme.color.white};
 `;
 
 export const Wrapper = styled.div`
