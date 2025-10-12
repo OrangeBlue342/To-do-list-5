@@ -10,7 +10,7 @@ import { useTasks } from "./useTasks";
 function App() {
 
 const {
-  tasks, 
+        tasks, 
         addNewTask,
         hideDoneTasks,
         togglehideDoneTasks, 
@@ -26,15 +26,20 @@ const {
     
     <Section title="Dodaj nowe zadanie" body={<Form addNewTask={addNewTask} />} />
     
-   <Section title="Lista zadań" body={<Tasks 
-tasks={tasks} hideDoneTasks={hideDoneTasks} removeTask={removeTask} toggleTasksDone={toggleTasksDone}/> } 
-extraHeaderContent={
-    <Buttons 
-    tasks={tasks} 
-    hideDoneTasks={hideDoneTasks}
-    setAllDone={setAllDone}
-    togglehideDoneTasks={togglehideDoneTasks}
-    /> 
+   <Section 
+     title="Lista zadań" 
+     body={<Tasks 
+     tasks={tasks} 
+     hideDoneTasks={hideDoneTasks} 
+     removeTask={removeTask} 
+     toggleTasksDone={toggleTasksDone}/> } 
+
+   extraHeaderContent={
+     <Buttons 
+     tasks={tasks} 
+     hideDoneTasks={hideDoneTasks}
+     setAllDone={setAllDone}
+     togglehideDoneTasks={togglehideDoneTasks} /> 
 } />
 
 

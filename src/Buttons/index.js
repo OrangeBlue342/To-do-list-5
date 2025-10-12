@@ -4,6 +4,7 @@ import { Button, Wrapper } from "./styled";
 const Buttons = ({tasks, hideDoneTasks, togglehideDoneTasks, setAllDone}) => {
     // Ensure tasks is always an array
     const safeTasks = Array.isArray(tasks) ? tasks : [];
+    
     if (safeTasks.length === 0) {
         return null;
     }
@@ -15,8 +16,7 @@ const Buttons = ({tasks, hideDoneTasks, togglehideDoneTasks, setAllDone}) => {
             </Button>
             <Button 
                 onClick={() => setAllDone()}
-                disabled={safeTasks.every(({done}) => done)}
-            >
+                disabled={safeTasks.every(({done}) => done)}>
                 Oznacz wszystkie jako ukończone
             </Button>
         </Wrapper>

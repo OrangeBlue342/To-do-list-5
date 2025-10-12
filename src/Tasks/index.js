@@ -8,12 +8,10 @@ const Tasks = ({tasks, toggleAllTasksDone, toggleHideDoneTasks, removeTask, togg
             {safeTasks.map(task => (
                 <Item 
                 key={task.id}
-                hidden={toggleAllTasksDone && toggleHideDoneTasks}
-                >
+                hidden={toggleAllTasksDone && toggleHideDoneTasks}>
                     <Button
                         button_done
-                        onClick={() => toggleTasksDone(task.id)}
-                        >
+                        onClick={() => toggleTasksDone(task.id)}>
                         {task.done ? "✔" : ""}
                     </Button>
                     <Content done={task.done}>

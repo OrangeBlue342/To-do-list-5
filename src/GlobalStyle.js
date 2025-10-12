@@ -18,6 +18,10 @@ html {
     background-color: ${({theme}) => theme.color.silver};
 }
 
+body {
+     background-color: ${({theme}) => theme.color.silver};
+};
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
