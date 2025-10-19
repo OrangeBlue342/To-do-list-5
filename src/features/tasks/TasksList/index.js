@@ -1,7 +1,7 @@
 
 import {List, Item, Content, Button} from "./styled";
 
-const Tasks = ({tasks, toggleAllTasksDone, toggleHideDoneTasks, removeTask, toggleTasksDone}) => {
+const TasksList = ({tasks, toggleAllTasksDone, toggleHideDoneTasks, removeTask, toggleTasksDone}) => {
     const safeTasks = Array.isArray(tasks) ? tasks : [];
     return (
         <List>
@@ -27,4 +27,4 @@ const Tasks = ({tasks, toggleAllTasksDone, toggleHideDoneTasks, removeTask, togg
     );
 };
 
-export default Tasks
+export default TasksList
