@@ -4,7 +4,7 @@ import { Button, Wrapper } from "./styled";
 import { selectTasks, toggleHideDone } from "../tasksSlice";
 
 const Buttons = ({setAllDone}) => {
-    // Ensure tasks is always an array
+
 
     const {tasks, HideDone} = useSelector(selectTasks);
     const dispatch = useDispatch();
