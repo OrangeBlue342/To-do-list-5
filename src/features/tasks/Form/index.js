@@ -22,7 +22,7 @@ const Form = () => {
     dispatch(addTask({
         content: newTaskContent.trim(),
         done: false,
-        id: nanoid()
+        id: nanoid(),
     }));
 
     setNewTaskContent("");
@@ -30,7 +30,7 @@ const Form = () => {
    }
    
     return (
-    <StyledForm onSubmit={onFormSubmit}>
+<StyledForm onSubmit={onFormSubmit}>
     <Input
     ref={inputRef}
     value={newTaskContent}

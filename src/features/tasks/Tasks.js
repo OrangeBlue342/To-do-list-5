@@ -3,22 +3,11 @@ import Buttons from "./Buttons";
 import Form from "./Form";
 import TasksList from "./TasksList";
 import Section from "../../common/Section";
-import { useTasks } from "../../useTasks";
-import {useSelector} from "react-redux";
-import { selectTasks } from "./tasksSlice";
+
 
 
 
 function Tasks() {
-
-const {tasks} = useSelector(selectTasks);
-
-const {
-       // tasks, 
-        addNewTask,
-        removeTask, 
-        toggleTasksDone, 
-        setAllDone} = useTasks();
 
 
   return (
@@ -26,20 +15,12 @@ const {
      <main>
     <h1 className="header">Lista zadań</h1>
     
-    <Section title="Dodaj nowe zadanie" body={<Form addNewTask={addNewTask} />} />
+    <Section title="Dodaj nowe zadanie" body={<Form />} />
     
    <Section 
      title="Lista zadań" 
-     body={<TasksList 
-     tasks={tasks} 
-     removeTask={removeTask} 
-     toggleTasksDone={toggleTasksDone}/> } 
-
-   extraHeaderContent={
-     <Buttons 
-     tasks={tasks} 
-     setAllDone={setAllDone} /> 
-} />
+     body={<TasksList /> } 
+     extraHeaderContent={<Buttons />} />
 
 
 </main> 
