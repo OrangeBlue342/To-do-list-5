@@ -5,10 +5,8 @@ import { selectHideDone, selectTasks, toggleTaskDone, removeTask } from "../task
 
 const TasksList = () => {
     
-    
     const tasks = useSelector(selectTasks);
     const hideDone = useSelector(selectHideDone);
-
 
     const dispatch = useDispatch();
     
