@@ -2,7 +2,7 @@
 import Buttons from "./Buttons";
 import Form from "./Form";
 import TasksList from "./TasksList";
-import Section from "../../common/Section";
+import Section from "../../../common/Section";
 
 
 

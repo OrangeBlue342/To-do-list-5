@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 import styled, {css} from "styled-components";
 
 export const List = styled.ul `
@@ -57,4 +58,9 @@ border: none;
     &:hover {background-color: hsl(348, 83%, 57%);}
     `}
 `;
+
+export const Link = styled(NavLink)`
+
+    text-decoration: none;
+`
 
