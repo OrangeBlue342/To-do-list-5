@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 import styled, {css} from "styled-components";
 
 export const List = styled.ul `
@@ -59,8 +58,5 @@ border: none;
     `}
 `;
 
-export const Link = styled(NavLink)`
 
-    text-decoration: none;
-`
 

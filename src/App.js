@@ -1,11 +1,12 @@
 import React from "react";
 import Tasks from "./features/tasks/TasksPage/Tasks";
-import { HashRouter, Link, Switch, Route } from "react-router-dom";
+import { HashRouter, Link, Switch, Route, Redirect } from "react-router-dom";
 import AuthorPage from "./features/Author/AuthorPage";
 import TaskPage from "./features/tasks/TaskPage";
 
+
 export default () => (
-    <HashRouter basename="/To-do-list-5">
+    <HashRouter>
     <nav>
         <ul>
             <li>
@@ -24,6 +25,9 @@ export default () => (
             </Route>
             <Route path="/autor">
             <AuthorPage />
+            </Route>
+            <Route path="/">
+             <Redirect to="/zadania"/>
             </Route>
         </Switch>
     </nav>
