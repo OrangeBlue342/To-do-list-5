@@ -5,6 +5,7 @@ max-width: 1000px;
 background-color: white;
 display: flex;
 justify-content: flex-start;
+flex-direction: column;
 align-items: flex-start;
 padding: 20px;
 margin: 5px, 20px;

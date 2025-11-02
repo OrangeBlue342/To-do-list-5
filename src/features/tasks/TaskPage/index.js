@@ -3,6 +3,8 @@ import Section from "../../../common/Section";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { getTaskById } from "../tasksSlice";
+import { Container } from "./styled";
+
 
 
 
@@ -12,17 +14,19 @@ function TaskPage() {
     const task = useSelector(state => getTaskById(state, id));
     
     return (
-        <div>
-            <h2>Dodaj nowe zadanie</h2>
+    <div>  
+    <h2>Szczegóły zadania</h2>
+<Container>
     <Section
     title={task ? task.content : "Nie znaleziono zadania"}
-    body={    
+    body={!!task && (    
             <>
-            <strong>Ukończono:</strong>
+            <><strong>Ukończono: </strong>{task.done ? "Tak" : "Nie"}</>
             </>
-    }
+    )}
     />
-</div>
+</Container>
+</div> 
     );
 }
 
